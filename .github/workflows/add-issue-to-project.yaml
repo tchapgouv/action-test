@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Get project data
         env:
-          GITHUB_TOKEN: ${{ secrets.TRIAGE_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.READ_WRITE_REPO }}
           ORGANIZATION: tchapgouv
           PROJECT_NUMBER: 8
         run: |
