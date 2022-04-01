@@ -47,15 +47,3 @@ jobs:
                 }
               }
             }' -f project=$PROJECT_ID -f issue=$ISSUE_ID --jq '.data.addProjectNextItem.projectNextItem.id')"
-  label_issue:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/github-script@v5
-        with:
-          script: |
-            github.rest.issues.addLabels({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              labels: ['web']
-            })
