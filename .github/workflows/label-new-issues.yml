@@ -1,3 +1,5 @@
+# Change the label name in the job if needed.
+# If the label is already present, this job runs successfully and does nothing.
 name: Label new issues
 on:
   issues:
